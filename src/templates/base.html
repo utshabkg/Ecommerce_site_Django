@@ -1,0 +1,51 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Base Template</title>
+    {% include 'base/css.html' %}
+    {% block base_head %}{% endblock %}
+</head>
+<body>
+{% include 'base/navbar.html' with brand_name='eCommerce' %}
+<div class='container'>
+    {% block content %}{% endblock %}
+</div>
+
+
+{% include 'base/js.html' %}
+
+<!--<script>-->
+<!--    //jQuery-->
+<!--    // $(selector)-->
+<!--    $(document).ready(function () {-->
+<!--        var productForm = $(".form-product-ajax")-->
+
+<!--        productForm.submit(function (event) {-->
+<!--            event.preventDefault();-->
+<!--            console.log("Form is not sending")-->
+<!--            var thisForm = $(this)-->
+<!--            var actionEndpoint = (thisForm.attr("action");-->
+<!--            var httpMethod = thisForm.attr("method");-->
+<!--            var formData = thisForm.serialize();-->
+
+<!--            $.ajax({-->
+<!--                url: actionEndpoint,-->
+<!--                method: httpMethod,-->
+<!--                data: formData,-->
+<!--                success: function () {-->
+
+<!--                },-->
+<!--                error: function (errorData) {-->
+<!--                        console.log("error")-->
+<!--                }-->
+<!--            })-->
+
+<!--        })-->
+<!--    })-->
+<!--</script>-->
+</body>
+</html>
