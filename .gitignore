@@ -1,0 +1,9 @@
+
+# --- security: never commit credentials ---
+.env
+.env.*
+*.pem
+*.key
+client_secret*.json
+service-account*.json
+credentials.json
